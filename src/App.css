@@ -1,38 +1,118 @@
-.App {
+/* Geral */
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+html,body {
+  height: 100%;
+  background-color: #ECEFF1;
+  transition: .3s;
+}
+
+a,
+a:link,
+a:hover,
+a:visited,
+a:active {
+  text-decoration: none !important;
+  color: #000000;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-center {
+  display: block;
+  margin: 0 auto;
+}
+
+.text-center {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Tema escuro */
+
+
+
+.dark,
+.dark header {
+  background-color: #263238;
+  color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.claro-escuro input {
+  margin: 0 0 0 16px;
+  display: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.dark .bi-sun {
+  display: block;
 }
 
-.App-link {
-  color: #61dafb;
+.dark .bi-moon {
+  display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dark .navbar-nav a {
+  color: #ffffff !important;
+}
+
+.dark #topo .contato {
+  border-color: #ffffff;
+}
+
+.dark #topo .contato a {
+  color: #ffffff;
+}
+
+
+/* Navbar */
+
+#topo {
+  padding: 16px 0;
+  background-color: rgba(0,0,0,.03);
+  margin: 0 0 64px 0;
+}
+
+#topo .navbar-nav {
+  margin: 0 auto;
+}
+
+#topo .navbar-nav li {
+  margin: 0 8px;
+}
+
+#topo .navbar-nav a {
+  font-weight: 500;
+}
+
+#topo .contato {
+  padding: 8px 16px;
+  border: 1px solid #000000;
+  border-radius: 21px;
+}
+
+#topo .contato a {
+  /* color: #000000; */
+}
+
+#topo .bi {
+  font-size: 20px;
+  cursor: pointer;
+  margin: 0 0 0 16px;
+}
+
+.bi-sun {
+  display: none;
+}
+
+/* Destaques */
+
+#destaques h1 {
+  text-align: center;
+  font-size: 64px;
 }
