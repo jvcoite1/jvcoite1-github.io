@@ -67,7 +67,7 @@ const Navbar = () => {
   
       <a className="navbar-brand" href="/">
 
-        <img src="" alt="" className="img-fluid" id="logo" />
+        <img src="./assets/img/logo-novo-branco.png" alt="" className="img-fluid" id="logo" />
 
       </a>
 
