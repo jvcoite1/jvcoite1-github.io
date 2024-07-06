@@ -2,7 +2,9 @@ import React from 'react'
 
 const Contato = () => {
   return (
-    <div></div>
+    <div id="contato">
+
+    </div>
   )
 }
 

@@ -1,11 +1,32 @@
 import React from "react";
-import { useEffect } from "react";
-
 
 
 const Navbar = () => {
+
+  const logo = () => {
+    if(document.body.classList.contains('dark')) {
+      document.getElementById('logo').src = './assets/img/logo-novo-branco.png'
+    } else {
+      document.getElementById('logo').src = './assets/img/logo-novo-preto.png'
+    }
+  }
+
+  const hamburger = () => {
+    if(document.body.classList.contains('dark')) {
+      document.getElementById('navbar').classList.remove('navbar-light') 
+      document.getElementById('navbar').classList.add('navbar-dark') 
+    } else {
+      document.getElementById('navbar').classList.remove('navbar-dark') 
+      document.getElementById('navbar').classList.add('navbar-light') 
+    }
+  }
+  
   
   window.onload = () => {
+    
+    logo()
+
+    hamburger()
 
     const temaEscuroBtn = document.getElementById('tema-escuro')
 
@@ -17,7 +38,10 @@ const Navbar = () => {
     // Event listener on change
     temaEscuroBtn.addEventListener('change', () => {
 
+      
       handleTema()
+      logo()
+      hamburger()
       console.log('mudou')
 
       // Remove o 'dark' do local storage
@@ -37,11 +61,17 @@ const Navbar = () => {
   return(
 
 <div id="topo">
-  <nav className="navbar navbar-expand-lg">
+  <nav className="navbar navbar-expand-lg" id="navbar">
   
     <div className="container">
   
-      <a className="navbar-brand" href="#"><span style={{color: "#ffffff"}}>Logo aqui</span></a>
+      <a className="navbar-brand" href="/">
+
+        {/* {document.body.classList.contains('dark') ? <> <img src="./assets/img/logo-preto.png" alt="" className="img-fluid" /> </> : <> <img src="./assets/img/logo-branco.png" alt="" className="img-fluid" /> </> }  */}
+        <img src="./assets/img/logo-preto.png" alt="" className="img-fluid" id="logo" />
+
+      </a>
+
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
@@ -52,20 +82,18 @@ const Navbar = () => {
             <a className="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Sobre</a>
+            <a className="nav-link" href="#sobre">Sobre</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Portfolio</a>
+            <a className="nav-link" href="#portfolio">Portfolio</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Contato</a>
+            <a className="nav-link" href="https://wa.me/5577999337186" target="_blank">Contato</a>
           </li>
         </ul>
       </div>
   
-      <div className="contato">
-        <a href="">Entre em contato</a>
-      </div>
+        <a className="contato" href="https://wa.me/5577999337186" target="_blank">Entre em contato</a>
 
       <div className="claro-escuro">
         <input type="checkbox" name="tema-escuro" id="tema-escuro" />
