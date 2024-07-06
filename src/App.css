@@ -120,6 +120,11 @@ a:active {
   font-weight: 500;
   margin: 0 4px;
   text-align: center;
+  transition: .2s ease
+}
+
+#topo .navbar-nav a:hover {
+  opacity: .8 ;
 }
 
 #topo .contato {
@@ -417,6 +422,7 @@ a:active {
 
   #topo .claro-escuro {
     margin: 0 0 0 auto;
+    display: none
   }
 
   #destaques h1 {

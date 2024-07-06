@@ -23,10 +23,6 @@ const Navbar = () => {
   
   
   window.onload = () => {
-    
-    logo()
-
-    hamburger()
 
     const temaEscuroBtn = document.getElementById('tema-escuro')
 
@@ -34,6 +30,10 @@ const Navbar = () => {
     const handleTema = () => {
       document.body.classList.toggle('dark')
     }
+
+    logo()
+
+    hamburger()
     
     // Event listener on change
     temaEscuroBtn.addEventListener('change', () => {
@@ -67,8 +67,7 @@ const Navbar = () => {
   
       <a className="navbar-brand" href="/">
 
-        {/* {document.body.classList.contains('dark') ? <> <img src="./assets/img/logo-preto.png" alt="" className="img-fluid" /> </> : <> <img src="./assets/img/logo-branco.png" alt="" className="img-fluid" /> </> }  */}
-        <img src="./assets/img/logo-preto.png" alt="" className="img-fluid" id="logo" />
+        <img src="" alt="" className="img-fluid" id="logo" />
 
       </a>
 
